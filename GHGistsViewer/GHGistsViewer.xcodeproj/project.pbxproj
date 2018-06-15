@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BA53736120D3F6A000B098E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53736020D3F6A000B098E1 /* AppDelegate.swift */; };
-		BA53736320D3F6A000B098E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53736220D3F6A000B098E1 /* ViewController.swift */; };
-		BA53736620D3F6A000B098E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA53736420D3F6A000B098E1 /* Main.storyboard */; };
 		BA53736820D3F6A200B098E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA53736720D3F6A200B098E1 /* Assets.xcassets */; };
 		BA53736B20D3F6A200B098E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA53736920D3F6A200B098E1 /* LaunchScreen.storyboard */; };
-		BA53737620D3F6A200B098E1 /* GHGistsViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53737520D3F6A200B098E1 /* GHGistsViewerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,13 +25,10 @@
 /* Begin PBXFileReference section */
 		BA53735D20D3F6A000B098E1 /* GHGistsViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHGistsViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA53736020D3F6A000B098E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA53736220D3F6A000B098E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BA53736520D3F6A000B098E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA53736720D3F6A200B098E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA53736A20D3F6A200B098E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA53736C20D3F6A200B098E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA53737120D3F6A200B098E1 /* GHGistsViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHGistsViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA53737520D3F6A200B098E1 /* GHGistsViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHGistsViewerTests.swift; sourceTree = "<group>"; };
 		BA53737720D3F6A200B098E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,8 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				BA53736020D3F6A000B098E1 /* AppDelegate.swift */,
-				BA53736220D3F6A000B098E1 /* ViewController.swift */,
-				BA53736420D3F6A000B098E1 /* Main.storyboard */,
 				BA53736720D3F6A200B098E1 /* Assets.xcassets */,
 				BA53736920D3F6A200B098E1 /* LaunchScreen.storyboard */,
 				BA53736C20D3F6A200B098E1 /* Info.plist */,
@@ -90,7 +82,6 @@
 		BA53737420D3F6A200B098E1 /* GHGistsViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				BA53737520D3F6A200B098E1 /* GHGistsViewerTests.swift */,
 				BA53737720D3F6A200B098E1 /* Info.plist */,
 			);
 			path = GHGistsViewerTests;
@@ -179,7 +170,6 @@
 			files = (
 				BA53736B20D3F6A200B098E1 /* LaunchScreen.storyboard in Resources */,
 				BA53736820D3F6A200B098E1 /* Assets.xcassets in Resources */,
-				BA53736620D3F6A000B098E1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +187,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA53736320D3F6A000B098E1 /* ViewController.swift in Sources */,
 				BA53736120D3F6A000B098E1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +195,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA53737620D3F6A200B098E1 /* GHGistsViewerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +209,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BA53736420D3F6A000B098E1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA53736520D3F6A000B098E1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		BA53736920D3F6A200B098E1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -365,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = bubblegum.GHGistsViewer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bubblegum.GHGistsViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -383,7 +363,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = bubblegum.GHGistsViewer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bubblegum.GHGistsViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
