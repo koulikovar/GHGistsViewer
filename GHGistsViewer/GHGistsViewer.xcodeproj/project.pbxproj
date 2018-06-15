@@ -10,6 +10,13 @@
 		BA53736120D3F6A000B098E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53736020D3F6A000B098E1 /* AppDelegate.swift */; };
 		BA53736820D3F6A200B098E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA53736720D3F6A200B098E1 /* Assets.xcassets */; };
 		BA53736B20D3F6A200B098E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA53736920D3F6A200B098E1 /* LaunchScreen.storyboard */; };
+		BA53739020D4249800B098E1 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53738F20D4249800B098E1 /* NetworkRequest.swift */; };
+		BA53739320D42A5F00B098E1 /* GistRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53739220D42A5F00B098E1 /* GistRequest.swift */; };
+		BA53739520D439F100B098E1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53739420D439F100B098E1 /* NetworkService.swift */; };
+		BA53739720D43B2400B098E1 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53739620D43B2400B098E1 /* NetworkResponse.swift */; };
+		BA53739A20D43F8000B098E1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53739920D43F8000B098E1 /* Config.swift */; };
+		BA53739C20D4402700B098E1 /* GistNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53739B20D4402700B098E1 /* GistNetworkService.swift */; };
+		BA53739E20D443C700B098E1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53739D20D443C700B098E1 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +37,13 @@
 		BA53736C20D3F6A200B098E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA53737120D3F6A200B098E1 /* GHGistsViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GHGistsViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA53737720D3F6A200B098E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA53738F20D4249800B098E1 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		BA53739220D42A5F00B098E1 /* GistRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistRequest.swift; sourceTree = "<group>"; };
+		BA53739420D439F100B098E1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		BA53739620D43B2400B098E1 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		BA53739920D43F8000B098E1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		BA53739B20D4402700B098E1 /* GistNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistNetworkService.swift; sourceTree = "<group>"; };
+		BA53739D20D443C700B098E1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,7 @@
 		BA53735F20D3F6A000B098E1 /* GHGistsViewer */ = {
 			isa = PBXGroup;
 			children = (
+				BA53738820D405D300B098E1 /* Source */,
 				BA53736020D3F6A000B098E1 /* AppDelegate.swift */,
 				BA53736720D3F6A200B098E1 /* Assets.xcassets */,
 				BA53736920D3F6A200B098E1 /* LaunchScreen.storyboard */,
@@ -85,6 +100,76 @@
 				BA53737720D3F6A200B098E1 /* Info.plist */,
 			);
 			path = GHGistsViewerTests;
+			sourceTree = "<group>";
+		};
+		BA53738820D405D300B098E1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				BA53739820D43F6E00B098E1 /* Helpers */,
+				BA53738A20D405ED00B098E1 /* PresentationLayer */,
+				BA53738920D405DD00B098E1 /* ServiceLayer */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BA53738920D405DD00B098E1 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BA53739620D43B2400B098E1 /* NetworkResponse.swift */,
+				BA53738F20D4249800B098E1 /* NetworkRequest.swift */,
+				BA53739D20D443C700B098E1 /* NetworkError.swift */,
+				BA53739420D439F100B098E1 /* NetworkService.swift */,
+				BA53739120D42A3A00B098E1 /* Gists */,
+				BA53739B20D4402700B098E1 /* GistNetworkService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		BA53738A20D405ED00B098E1 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BA53738C20D4061F00B098E1 /* Gists */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		BA53738C20D4061F00B098E1 /* Gists */ = {
+			isa = PBXGroup;
+			children = (
+				BA53738E20D4064D00B098E1 /* DetailGist */,
+				BA53738D20D4063800B098E1 /* GistsList */,
+			);
+			path = Gists;
+			sourceTree = "<group>";
+		};
+		BA53738D20D4063800B098E1 /* GistsList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GistsList;
+			sourceTree = "<group>";
+		};
+		BA53738E20D4064D00B098E1 /* DetailGist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailGist;
+			sourceTree = "<group>";
+		};
+		BA53739120D42A3A00B098E1 /* Gists */ = {
+			isa = PBXGroup;
+			children = (
+				BA53739220D42A5F00B098E1 /* GistRequest.swift */,
+			);
+			path = Gists;
+			sourceTree = "<group>";
+		};
+		BA53739820D43F6E00B098E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BA53739920D43F8000B098E1 /* Config.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,7 +272,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA53739C20D4402700B098E1 /* GistNetworkService.swift in Sources */,
+				BA53739E20D443C700B098E1 /* NetworkError.swift in Sources */,
+				BA53739020D4249800B098E1 /* NetworkRequest.swift in Sources */,
+				BA53739720D43B2400B098E1 /* NetworkResponse.swift in Sources */,
 				BA53736120D3F6A000B098E1 /* AppDelegate.swift in Sources */,
+				BA53739520D439F100B098E1 /* NetworkService.swift in Sources */,
+				BA53739320D42A5F00B098E1 /* GistRequest.swift in Sources */,
+				BA53739A20D43F8000B098E1 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
