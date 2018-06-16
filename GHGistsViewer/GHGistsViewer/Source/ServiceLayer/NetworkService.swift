@@ -16,5 +16,5 @@ protocol NetworkService {
 
     func perform(_ request: NetworkRequest,
                  success: @escaping NetworkServiceRequestSuccess,
-                 failure: @escaping NetworkServiceRequestFailure) throws
+                 failure: @escaping NetworkServiceRequestFailure)
 }

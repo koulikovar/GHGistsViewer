@@ -6,5 +6,9 @@
   Copyright © 2018 Your Mother Lover. All rights reserved.
 */
 
+"GISTS_LIST_VC_TITLE" = "Gists List";
+
 "NETWORK_URL_ERROR" = "Incorrect URL";
 "NETWORK_RESPONSE_DATA_ERROR" = "Data response is undefined";
+
+"JSON_DECODE_ERROR" = "Json parsing error";

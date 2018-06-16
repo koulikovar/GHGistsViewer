@@ -18,7 +18,7 @@
 		BA53739E20D443C700B098E1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA53739D20D443C700B098E1 /* NetworkError.swift */; };
 		BA5373A520D5498C00B098E1 /* Gist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5373A420D5498C00B098E1 /* Gist.swift */; };
 		BA5373A720D54DDA00B098E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5373A620D54DDA00B098E1 /* User.swift */; };
-		BA5373AC20D552F500B098E1 /* Localizible.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA5373AE20D552F500B098E1 /* Localizible.strings */; };
+		BA5373AC20D552F500B098E1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BA5373AE20D552F500B098E1 /* Localizable.strings */; };
 		BA5373B120D5538800B098E1 /* String+Localizible.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5373B020D5538800B098E1 /* String+Localizible.swift */; };
 		BA5373B420D55F8400B098E1 /* ModelMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5373B320D55F8400B098E1 /* ModelMaker.swift */; };
 		BA5DAD4720D565E600F919E4 /* GistsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD4520D565E600F919E4 /* GistsListViewController.swift */; };
@@ -55,7 +55,7 @@
 		BA53739D20D443C700B098E1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BA5373A420D5498C00B098E1 /* Gist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gist.swift; sourceTree = "<group>"; };
 		BA5373A620D54DDA00B098E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		BA5373AD20D552F500B098E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizible.strings; sourceTree = "<group>"; };
+		BA5373AD20D552F500B098E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BA5373B020D5538800B098E1 /* String+Localizible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localizible.swift"; sourceTree = "<group>"; };
 		BA5373B320D55F8400B098E1 /* ModelMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMaker.swift; sourceTree = "<group>"; };
 		BA5DAD4520D565E600F919E4 /* GistsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListViewController.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 		BA5373A920D5529000B098E1 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				BA5373AE20D552F500B098E1 /* Localizible.strings */,
+				BA5373AE20D552F500B098E1 /* Localizable.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -350,7 +350,7 @@
 				BA53736B20D3F6A200B098E1 /* LaunchScreen.storyboard in Resources */,
 				BA5DAD4820D565E600F919E4 /* GistsListViewController.xib in Resources */,
 				BA53736820D3F6A200B098E1 /* Assets.xcassets in Resources */,
-				BA5373AC20D552F500B098E1 /* Localizible.strings in Resources */,
+				BA5373AC20D552F500B098E1 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,12 +413,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		BA5373AE20D552F500B098E1 /* Localizible.strings */ = {
+		BA5373AE20D552F500B098E1 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BA5373AD20D552F500B098E1 /* en */,
 			);
-			name = Localizible.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

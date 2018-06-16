@@ -8,4 +8,6 @@
 
 protocol GistsListPresenterProtocol {
     init(view: GistsListView, networkService: NetworkService)
+
+    func updateList()
 }

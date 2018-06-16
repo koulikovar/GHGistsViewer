@@ -10,11 +10,4 @@ import Foundation
 
 struct NetworkError: LocalizedError {
     let message: String
-    var errorDescription: String? {
-        return message
-    }
-
-    init(message: String) {
-        self.message = message
-    }
 }
