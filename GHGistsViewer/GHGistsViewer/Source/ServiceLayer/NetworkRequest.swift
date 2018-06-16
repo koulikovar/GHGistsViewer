@@ -8,18 +8,26 @@
 
 import Foundation
 
-enum ResponseDataType {
-    case json
-    case plainData
-}
-
-enum HTTPRequestMethod: String {
+enum NetworkRequestMethod: String {
     case post = "POST"
     case get = "GET"
 }
 
 protocol NetworkRequest {
     var url: String { get }
-    var method: HTTPRequestMethod { get }
-    var responseType: ResponseDataType { get }
+    var method: NetworkRequestMethod { get }
+}
+
+extension NetworkRequest {
+    func convertedToURLRequest() -> URLRequest? {
+        guard let url = URL(string: url) else {
+            return nil
+        }
+
+        var urlRequest = URLRequest(url: url)
+
+        urlRequest.httpMethod = method.rawValue
+
+        return urlRequest
+    }
 }

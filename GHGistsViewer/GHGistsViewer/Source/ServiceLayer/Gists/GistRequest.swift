@@ -6,20 +6,18 @@
 //  Copyright © 2018 Your Mother Lover. All rights reserved.
 //
 
-enum GistRequest: NetworkRequest {
+enum GistRequest {
     case list
     case detail(gistId: String)
+}
 
+extension GistRequest: NetworkRequest {
     var url: String {
         return "\(Config.gistBaseUrl)\(path)"
     }
 
-    var method: HTTPRequestMethod {
+    var method: NetworkRequestMethod {
         return .get
-    }
-
-    var responseType: ResponseDataType {
-        return .json
     }
 
     private var path: String {
@@ -30,5 +28,4 @@ enum GistRequest: NetworkRequest {
             return "/gists/\(gistId)"
         }
     }
-
 }

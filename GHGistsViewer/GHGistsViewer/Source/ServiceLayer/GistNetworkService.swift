@@ -9,21 +9,32 @@
 import Foundation
 
 final class GistNetworkService: NetworkService {
-    func perform(_ request: NetworkRequest,
-                 success: @escaping NetworkService.NetworkServiceRequestSuccess,
-                 failure: @escaping NetworkService.NetworkServiceRequestFailure) throws {
-        let urlRequest = try makeUrlRequest(from: request)
+
+    private let session: URLSession
+
+    init(session: URLSession = URLSession.shared) {
+        self.session = session
     }
 
-    private func makeUrlRequest(from request: NetworkRequest) throws -> URLRequest {
-        guard let url = URL(string: request.url) else {
-            throw NetworkError.invalidRequest
+    func perform(_ request: NetworkRequest, success: @escaping NetworkServiceRequestSuccess, failure: @escaping NetworkServiceRequestFailure) {
+        guard let urlRequest = request.convertedToURLRequest() else {
+            failure(NetworkError(message: "NETWORK_URL_ERROR".localized))
+            return
         }
 
-        var urlRequest = URLRequest(url: url)
-
-        urlRequest.httpMethod = request.method.rawValue
-
-        return urlRequest
+        let gistTask = session.dataTask(with: urlRequest) { data, respone, error in
+            if let error = error {
+                assertionFailure(error.localizedDescription)
+                failure(NetworkError(message: error.localizedDescription))
+                return
+            }
+            guard let data = data else {
+                assertionFailure("NETWORK_RESPONSE_DATA_ERROR".localized)
+                failure(NetworkError(message: "NETWORK_RESPONSE_DATA_ERROR".localized))
+                return
+            }
+            success(data)
+        }
+        gistTask.resume()
     }
 }
