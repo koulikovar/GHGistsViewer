@@ -6,12 +6,12 @@
 //  Copyright © 2018 Your Mother Lover. All rights reserved.
 //
 
-final class GistsListAssembly {
+final class GistsListAssembly: Assembly {
     let view: GistsListView
 
-    init() {
+    init(router: Router, dataProvider: DataProvider<[Gist]>) {
         self.view = GistsListViewController()
-        let presenter = GistsListPresenter(view: view, networkService: GistNetworkService())
+        let presenter = GistsListPresenter(router: router, view: view, dataProvider: dataProvider)
         self.view.presenter = presenter
     }
 }

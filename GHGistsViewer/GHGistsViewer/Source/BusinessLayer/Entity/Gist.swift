@@ -17,3 +17,9 @@ struct Gist: Decodable {
     let title: String
     let owner: User
 }
+
+extension Gist {
+    static var undefined: Gist {
+        return Gist(id: "", title: "undefined", owner: User(id: 0, login: "", avatarUrl: ""))
+    }
+}

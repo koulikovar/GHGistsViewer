@@ -27,6 +27,20 @@
 		BA5DAD5520D56D5F00F919E4 /* GistsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD5420D56D5F00F919E4 /* GistsListView.swift */; };
 		BA5DAD5720D56E8100F919E4 /* GistsListPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD5620D56E8100F919E4 /* GistsListPresenterProtocol.swift */; };
 		BA5DAD5920D56E8D00F919E4 /* GistsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD5820D56E8D00F919E4 /* GistsListPresenter.swift */; };
+		BA5DAD5F20D652AC00F919E4 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD5E20D652AC00F919E4 /* DataProvider.swift */; };
+		BA5DAD6520D6652100F919E4 /* GistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD6320D6652100F919E4 /* GistTableViewCell.swift */; };
+		BA5DAD6620D6652100F919E4 /* GistTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5DAD6420D6652100F919E4 /* GistTableViewCell.xib */; };
+		BA5DAD6820D6694A00F919E4 /* UITableViewCell+CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD6720D6694A00F919E4 /* UITableViewCell+CellIdentifier.swift */; };
+		BA5DAD6B20D6712A00F919E4 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD6A20D6712A00F919E4 /* ImageProvider.swift */; };
+		BA5DAD6E20D6758B00F919E4 /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD6D20D6758B00F919E4 /* ImageRequest.swift */; };
+		BA5DAD7320D681D400F919E4 /* DetailGistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7120D681D400F919E4 /* DetailGistViewController.swift */; };
+		BA5DAD7420D681D400F919E4 /* DetailGistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5DAD7220D681D400F919E4 /* DetailGistViewController.xib */; };
+		BA5DAD7620D6822600F919E4 /* DetailGistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7520D6822600F919E4 /* DetailGistView.swift */; };
+		BA5DAD7820D6827F00F919E4 /* DetailGistPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7720D6827F00F919E4 /* DetailGistPresenterProtocol.swift */; };
+		BA5DAD7A20D682AD00F919E4 /* DetailGistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7920D682AD00F919E4 /* DetailGistPresenter.swift */; };
+		BA5DAD7C20D6847800F919E4 /* DetailGistAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7B20D6847800F919E4 /* DetailGistAssembly.swift */; };
+		BA5DAD7E20D6875300F919E4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7D20D6875300F919E4 /* Router.swift */; };
+		BA5DAD8020D68ACD00F919E4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7F20D68ACD00F919E4 /* Assembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +78,20 @@
 		BA5DAD5420D56D5F00F919E4 /* GistsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListView.swift; sourceTree = "<group>"; };
 		BA5DAD5620D56E8100F919E4 /* GistsListPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListPresenterProtocol.swift; sourceTree = "<group>"; };
 		BA5DAD5820D56E8D00F919E4 /* GistsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistsListPresenter.swift; sourceTree = "<group>"; };
+		BA5DAD5E20D652AC00F919E4 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		BA5DAD6320D6652100F919E4 /* GistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GistTableViewCell.swift; sourceTree = "<group>"; };
+		BA5DAD6420D6652100F919E4 /* GistTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GistTableViewCell.xib; sourceTree = "<group>"; };
+		BA5DAD6720D6694A00F919E4 /* UITableViewCell+CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+CellIdentifier.swift"; sourceTree = "<group>"; };
+		BA5DAD6A20D6712A00F919E4 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		BA5DAD6D20D6758B00F919E4 /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		BA5DAD7120D681D400F919E4 /* DetailGistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGistViewController.swift; sourceTree = "<group>"; };
+		BA5DAD7220D681D400F919E4 /* DetailGistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailGistViewController.xib; sourceTree = "<group>"; };
+		BA5DAD7520D6822600F919E4 /* DetailGistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGistView.swift; sourceTree = "<group>"; };
+		BA5DAD7720D6827F00F919E4 /* DetailGistPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGistPresenterProtocol.swift; sourceTree = "<group>"; };
+		BA5DAD7920D682AD00F919E4 /* DetailGistPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGistPresenter.swift; sourceTree = "<group>"; };
+		BA5DAD7B20D6847800F919E4 /* DetailGistAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGistAssembly.swift; sourceTree = "<group>"; };
+		BA5DAD7D20D6875300F919E4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BA5DAD7F20D68ACD00F919E4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +169,7 @@
 				BA53739D20D443C700B098E1 /* NetworkError.swift */,
 				BA53739420D439F100B098E1 /* NetworkService.swift */,
 				BA53739120D42A3A00B098E1 /* Gists */,
+				BA5DAD6C20D6757A00F919E4 /* Image */,
 				BA53739B20D4402700B098E1 /* GistNetworkService.swift */,
 			);
 			path = ServiceLayer;
@@ -149,6 +178,7 @@
 		BA53738A20D405ED00B098E1 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				BA5DAD7F20D68ACD00F919E4 /* Assembly.swift */,
 				BA53738C20D4061F00B098E1 /* Gists */,
 			);
 			path = PresentationLayer;
@@ -176,6 +206,9 @@
 		BA53738E20D4064D00B098E1 /* DetailGist */ = {
 			isa = PBXGroup;
 			children = (
+				BA5DAD7B20D6847800F919E4 /* DetailGistAssembly.swift */,
+				BA5DAD7020D681B800F919E4 /* Presenter */,
+				BA5DAD6F20D681B000F919E4 /* View */,
 			);
 			path = DetailGist;
 			sourceTree = "<group>";
@@ -200,6 +233,9 @@
 		BA5373A220D5495500B098E1 /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				BA5DAD7D20D6875300F919E4 /* Router.swift */,
+				BA5DAD6920D6711000F919E4 /* ImageProvider */,
+				BA5DAD5D20D6525800F919E4 /* DataProvider */,
 				BA5373B220D55F6B00B098E1 /* Model */,
 				BA5373A320D5497400B098E1 /* Entity */,
 			);
@@ -235,6 +271,7 @@
 			isa = PBXGroup;
 			children = (
 				BA5373B020D5538800B098E1 /* String+Localizible.swift */,
+				BA5DAD6720D6694A00F919E4 /* UITableViewCell+CellIdentifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -250,6 +287,7 @@
 		BA5DAD4420D5653400F919E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA5DAD6020D664DE00F919E4 /* Cell */,
 				BA5DAD5420D56D5F00F919E4 /* GistsListView.swift */,
 				BA5DAD4520D565E600F919E4 /* GistsListViewController.swift */,
 				BA5DAD4620D565E600F919E4 /* GistsListViewController.xib */,
@@ -262,6 +300,58 @@
 			children = (
 				BA5DAD5620D56E8100F919E4 /* GistsListPresenterProtocol.swift */,
 				BA5DAD5820D56E8D00F919E4 /* GistsListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BA5DAD5D20D6525800F919E4 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD5E20D652AC00F919E4 /* DataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		BA5DAD6020D664DE00F919E4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD6320D6652100F919E4 /* GistTableViewCell.swift */,
+				BA5DAD6420D6652100F919E4 /* GistTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BA5DAD6920D6711000F919E4 /* ImageProvider */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD6A20D6712A00F919E4 /* ImageProvider.swift */,
+			);
+			path = ImageProvider;
+			sourceTree = "<group>";
+		};
+		BA5DAD6C20D6757A00F919E4 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD6D20D6758B00F919E4 /* ImageRequest.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		BA5DAD6F20D681B000F919E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD7520D6822600F919E4 /* DetailGistView.swift */,
+				BA5DAD7120D681D400F919E4 /* DetailGistViewController.swift */,
+				BA5DAD7220D681D400F919E4 /* DetailGistViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA5DAD7020D681B800F919E4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD7720D6827F00F919E4 /* DetailGistPresenterProtocol.swift */,
+				BA5DAD7920D682AD00F919E4 /* DetailGistPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -351,6 +441,8 @@
 				BA5DAD4820D565E600F919E4 /* GistsListViewController.xib in Resources */,
 				BA53736820D3F6A200B098E1 /* Assets.xcassets in Resources */,
 				BA5373AC20D552F500B098E1 /* Localizable.strings in Resources */,
+				BA5DAD7420D681D400F919E4 /* DetailGistViewController.xib in Resources */,
+				BA5DAD6620D6652100F919E4 /* GistTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,21 +460,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5DAD7820D6827F00F919E4 /* DetailGistPresenterProtocol.swift in Sources */,
+				BA5DAD6B20D6712A00F919E4 /* ImageProvider.swift in Sources */,
 				BA53739C20D4402700B098E1 /* GistNetworkService.swift in Sources */,
+				BA5DAD6820D6694A00F919E4 /* UITableViewCell+CellIdentifier.swift in Sources */,
+				BA5DAD7E20D6875300F919E4 /* Router.swift in Sources */,
 				BA5DAD5920D56E8D00F919E4 /* GistsListPresenter.swift in Sources */,
 				BA5DAD4720D565E600F919E4 /* GistsListViewController.swift in Sources */,
 				BA53739E20D443C700B098E1 /* NetworkError.swift in Sources */,
+				BA5DAD6520D6652100F919E4 /* GistTableViewCell.swift in Sources */,
 				BA5373A520D5498C00B098E1 /* Gist.swift in Sources */,
 				BA5373B120D5538800B098E1 /* String+Localizible.swift in Sources */,
+				BA5DAD7620D6822600F919E4 /* DetailGistView.swift in Sources */,
 				BA53739020D4249800B098E1 /* NetworkRequest.swift in Sources */,
 				BA53736120D3F6A000B098E1 /* AppDelegate.swift in Sources */,
 				BA5DAD5720D56E8100F919E4 /* GistsListPresenterProtocol.swift in Sources */,
 				BA5DAD5520D56D5F00F919E4 /* GistsListView.swift in Sources */,
+				BA5DAD7C20D6847800F919E4 /* DetailGistAssembly.swift in Sources */,
+				BA5DAD8020D68ACD00F919E4 /* Assembly.swift in Sources */,
 				BA53739520D439F100B098E1 /* NetworkService.swift in Sources */,
 				BA53739320D42A5F00B098E1 /* GistRequest.swift in Sources */,
+				BA5DAD7A20D682AD00F919E4 /* DetailGistPresenter.swift in Sources */,
 				BA5373A720D54DDA00B098E1 /* User.swift in Sources */,
+				BA5DAD7320D681D400F919E4 /* DetailGistViewController.swift in Sources */,
+				BA5DAD5F20D652AC00F919E4 /* DataProvider.swift in Sources */,
 				BA5DAD5220D56D2500F919E4 /* GistsListAssembly.swift in Sources */,
 				BA5373B420D55F8400B098E1 /* ModelMaker.swift in Sources */,
+				BA5DAD6E20D6758B00F919E4 /* ImageRequest.swift in Sources */,
 				BA53739A20D43F8000B098E1 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

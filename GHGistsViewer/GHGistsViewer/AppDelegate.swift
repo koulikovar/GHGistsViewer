@@ -12,11 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    lazy var router: Router = Router(networkService: GistNetworkService())
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UINavigationController(rootViewController: GistsListAssembly().view as! UIViewController)
+        window.rootViewController = UINavigationController(rootViewController: router.gistsListView as! UIViewController)
         window.backgroundColor = .white
         window.makeKeyAndVisible()
         self.window = window

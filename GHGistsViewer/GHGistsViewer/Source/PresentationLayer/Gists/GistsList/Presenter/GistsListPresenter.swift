@@ -9,29 +9,49 @@
 import Foundation
 
 final class GistsListPresenter: GistsListPresenterProtocol {
-    private weak var view: GistsListView?
-    private let networkService: NetworkService
+    var list: [Gist] {
+        guard let data = dataProvider.data else {
+            return []
+        }
+        return data
+    }
 
-    init(view: GistsListView, networkService: NetworkService) {
+    private let router: Router
+    private weak var view: GistsListView?
+    private let dataProvider: DataProvider<[Gist]>
+
+    init(router: Router, view: GistsListView, dataProvider: DataProvider<[Gist]>) {
         self.view = view
-        self.networkService = networkService
+        self.dataProvider = dataProvider
+        self.router = router
     }
 
     func updateList() {
-        networkService.perform(GistRequest.list, success: { [weak self] data in
-            guard let gists = ModelMaker.make(with: data, of: [Gist].self) else {
-                DispatchQueue.main.async {
-                    self?.view?.showError(message: "JSON_DECODE_ERROR".localized)
-                }
-                return
-            }
+        dataProvider.updateData(GistRequest.list, success: {
             DispatchQueue.main.async {
-                self?.view?.updateTableView(with: gists)
+                self.view?.updateTableView()
             }
-        }, failure: { [weak self] error in
+        }, failure: { errorDescription in
             DispatchQueue.main.async {
-                self?.view?.showError(message: error.message)
+                self.view?.showError(message: errorDescription)
             }
         })
+    }
+
+    func loadImage(for url: String, success: @escaping ImageLoadingSuccess, failure: @escaping ImageLoadingFailure) {
+        router.imageProvider.loadImage(from: url, success: { image in
+            DispatchQueue.main.async {
+                success(image)
+            }
+        }, failure: { error in
+            DispatchQueue.main.async {
+                failure(error)
+            }
+        })
+    }
+
+    func didSelect(_ gist: Gist) {
+        let detailGist = router.detailGistView(for: gist)
+        view?.push(detailGist)
     }
 }

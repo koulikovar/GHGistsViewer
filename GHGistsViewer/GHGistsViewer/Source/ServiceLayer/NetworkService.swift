@@ -9,8 +9,8 @@
 import Foundation
 
 protocol NetworkService {
-    typealias NetworkServiceRequestSuccess = (_: Data) -> Void
-    typealias NetworkServiceRequestFailure = (_: NetworkError) -> Void
+    typealias NetworkServiceRequestSuccess = (Data) -> ()
+    typealias NetworkServiceRequestFailure = (NetworkError) -> ()
 
     init(session: URLSession)
 

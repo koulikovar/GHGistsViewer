@@ -9,6 +9,7 @@
 protocol GistsListView: AnyObject {
     var presenter: GistsListPresenterProtocol! { get set }
 
-    func updateTableView(with gists: [Gist])
+    func updateTableView()
+    func push(_ view: DetailGistView)
     func showError(message: String)
 }
