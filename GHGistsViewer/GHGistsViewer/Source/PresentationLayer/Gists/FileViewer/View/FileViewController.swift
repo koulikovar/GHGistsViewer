@@ -9,7 +9,7 @@
 import UIKit
 
 class FileViewController: UIViewController, FileViewer {
-    @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var content: UITextView!
 
     var presenter: FileViewerPresenterProtocol!
 
