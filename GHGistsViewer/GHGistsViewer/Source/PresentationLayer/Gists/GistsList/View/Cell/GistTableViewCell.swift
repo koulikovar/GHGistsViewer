@@ -10,7 +10,7 @@ import UIKit
 
 class GistTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var gistDescription: UILabel!
     @IBOutlet weak var avatar: UIImageView!
 
     override func awakeFromNib() {

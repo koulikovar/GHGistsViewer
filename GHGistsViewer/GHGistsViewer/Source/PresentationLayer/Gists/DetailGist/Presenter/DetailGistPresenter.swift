@@ -19,8 +19,8 @@ final class DetailGistPresenter: DetailGistPresenterProtocol {
         self.router = router
     }
 
-    func title() -> String {
-        return gist().title
+    func description() -> String {
+        return gist().description
     }
 
     func username() -> String {

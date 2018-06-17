@@ -47,6 +47,10 @@ final class GistsListPresenter: GistsListPresenterProtocol {
         return gists()
     }
 
+    func title(for gist: Gist) -> String {
+        return "\(gist.owner.login) / \(gist.files.first!.key)"
+    }
+
     func didSelect(_ gist: Gist) {
         let detailGist = router.detailGistView(for: gist)
         view?.push(detailGist)

@@ -24,7 +24,7 @@ class DetailGistViewController: UIViewController {
         title = "DETAIL_GIST_TITLE".localized
 
         username.text = presenter.username()
-        gistTitle.text = presenter.title()
+        gistTitle.text = presenter.description()
 
         presenter.loadAvatar(success: { [weak self] image in
             self?.avatar.image = image

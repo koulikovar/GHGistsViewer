@@ -9,14 +9,14 @@
 struct Gist: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
-        case title = "description"
+        case description
         case owner
         case files
         case commits = "history"
     }
 
     let id: String
-    let title: String
+    let description: String
     let owner: User
     let files: [String: File]
     let commits: [Commit]?
@@ -25,7 +25,7 @@ struct Gist: Decodable {
 extension Gist {
     static var undefined: Gist {
         return Gist(id: "",
-                    title: "undefined",
+                    description: "",
                     owner: User(id: 0, login: "", avatarUrl: ""),
                     files: [:],
                     commits: [])

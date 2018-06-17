@@ -10,10 +10,6 @@ import Foundation
 
 final class ModelMaker {
     static func make<M: Decodable>(with data: Data, of type: M.Type) -> M? {
-        guard let model = try? JSONDecoder().decode(type, from: data) else {
-            return nil
-        }
-
-        return model
+        return try? JSONDecoder().decode(type, from: data)
     }
 }

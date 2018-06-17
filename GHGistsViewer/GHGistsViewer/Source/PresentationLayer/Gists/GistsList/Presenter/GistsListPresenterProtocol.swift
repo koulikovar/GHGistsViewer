@@ -16,6 +16,7 @@ protocol GistsListPresenterProtocol {
 
     func didSelect(_ gist: Gist)
     func list() -> [Gist]
+    func title(for gist: Gist) -> String
     func updateList()
     func loadImage(for url: String,
                    success: @escaping ImageLoadingSuccess,

@@ -61,8 +61,8 @@ extension GistsListViewController: UITableViewDelegate, UITableViewDataSource {
 
         let currentGist = presenter.list()[indexPath.row]
 
-        cell.title.text = currentGist.title
-        cell.username.text = currentGist.owner.login
+        cell.title.text = presenter.title(for: currentGist)
+        cell.gistDescription.text = currentGist.description
 
         presenter.loadImage(for: currentGist.owner.avatarUrl, success: { image in
             if let cellThatRequested = tableView.cellForRow(at: indexPath) as? GistTableViewCell {

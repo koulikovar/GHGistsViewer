@@ -14,7 +14,7 @@ protocol DetailGistPresenterProtocol {
 
     init(router: Router, view: DetailGistView, dataProvider: DataProvider<Gist>)
 
-    func title() -> String
+    func description() -> String
     func username() -> String
     func files() -> [File]
     func commits() -> [Commit]

@@ -27,7 +27,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aEY-bh-yWd"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcB-Yo-WvN">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcB-Yo-WvN">
                         <rect key="frame" x="54" y="2" width="258" height="11.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -58,8 +58,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="avatar" destination="YQn-Hp-BBU" id="9pf-q8-Lhw"/>
-                <outlet property="title" destination="aOm-Mb-IN6" id="DmK-r1-C7N"/>
-                <outlet property="username" destination="zcB-Yo-WvN" id="pDZ-AZ-CsY"/>
+                <outlet property="gistDescription" destination="aOm-Mb-IN6" id="9za-ly-O5d"/>
+                <outlet property="title" destination="zcB-Yo-WvN" id="Xy9-SH-MGU"/>
             </connections>
             <point key="canvasLocation" x="-38" y="-163.5"/>
         </tableViewCell>
