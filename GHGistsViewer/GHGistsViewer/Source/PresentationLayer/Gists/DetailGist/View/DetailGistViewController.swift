@@ -21,6 +21,10 @@ class DetailGistViewController: UIViewController {
 
         tableView.tableFooterView = UIView()
 
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(update), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+
         title = "DETAIL_GIST_TITLE".localized
 
         username.text = presenter.username()
@@ -29,13 +33,16 @@ class DetailGistViewController: UIViewController {
         presenter.loadAvatar(success: { [weak self] image in
             self?.avatar.image = image
         }, failure: {error in
-            assertionFailure(error)
             print(error)
         })
 
-        presenter.update()
+        update()
 
         // Do any additional setup after loading the view.
+    }
+
+    @objc private func update() {
+        presenter.update()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,11 +54,16 @@ class DetailGistViewController: UIViewController {
 extension DetailGistViewController: DetailGistView {
     func updateTableView() {
         tableView.reloadData()
+        tableView.refreshControl?.endRefreshing()
     }
 
     func showError(message: String) {
-        assertionFailure(message)
-        print(message)
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "CANCEL_BUTTON_TITLE".localized, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "REFRESH_BUTTON_TITLE".localized, style: .default, handler: { [weak self] action in
+            self?.presenter.update()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
     func push(_ view: FileViewer) {
@@ -100,7 +112,7 @@ extension DetailGistViewController: UITableViewDelegate, UITableViewDataSource {
         else {
             let commit = presenter.commits()[indexPath.row]
             cell.textLabel?.text = commit.version
-            cell.detailTextLabel?.text = "Additions: \(commit.status.additions), Deletions: \(commit.status.deletions)"
+            cell.detailTextLabel?.text = presenter.status(for: commit)
         }
 
         return cell

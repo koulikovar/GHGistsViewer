@@ -18,6 +18,7 @@ protocol DetailGistPresenterProtocol {
     func username() -> String
     func files() -> [File]
     func commits() -> [Commit]
+    func status(for commit: Commit) -> String
     func update()
     func didSelect(_ file: File)
     func loadAvatar(success: @escaping ImageLoadingSuccess, failure: @escaping ImageLoadingFailure)

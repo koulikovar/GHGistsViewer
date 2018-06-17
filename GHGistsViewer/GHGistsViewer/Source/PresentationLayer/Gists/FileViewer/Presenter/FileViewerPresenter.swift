@@ -18,17 +18,10 @@ final class FileViewerPresenter: FileViewerPresenterProtocol {
     }
 
     func title() -> String {
-        guard let file = dataProvider.data else {
-            return ""
-        }
-        return file.name
+        return dataProvider.data?.name ?? ""
     }
 
     func content() -> String {
-        guard let file = dataProvider.data,
-            let content = file.content else {
-            return ""
-        }
-        return content
+        return dataProvider.data?.content ?? ""
     }
 }

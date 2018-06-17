@@ -57,9 +57,6 @@ final class GistsListPresenter: GistsListPresenterProtocol {
     }
 
     private func gists() -> [Gist] {
-        guard let data = dataProvider.data else {
-            return []
-        }
-        return data
+        return dataProvider.data ?? []
     }
 }

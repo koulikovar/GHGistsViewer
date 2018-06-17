@@ -16,7 +16,7 @@ struct Gist: Decodable {
     }
 
     let id: String
-    let description: String
+    let description: String?
     let owner: User
     let files: [String: File]
     let commits: [Commit]?
@@ -25,7 +25,7 @@ struct Gist: Decodable {
 extension Gist {
     static var undefined: Gist {
         return Gist(id: "",
-                    description: "",
+                    description: nil,
                     owner: User(id: 0, login: "", avatarUrl: ""),
                     files: [:],
                     commits: [])

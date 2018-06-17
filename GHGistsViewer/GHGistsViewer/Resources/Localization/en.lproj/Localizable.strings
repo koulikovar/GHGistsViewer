@@ -11,6 +11,8 @@
 "DETAIL_GIST_FILES_LIST_TITLE" = "Files list";
 "DETAIL_GIST_COMMITS_TITLE" = "Commits";
 "INVALID_IMAGE_DATA" = "Invalid image data";
+"REFRESH_BUTTON_TITLE" = "Refresh";
+"CANCEL_BUTTON_TITLE" = "Cancel";
 
 "NETWORK_URL_ERROR" = "Incorrect URL";
 "NETWORK_RESPONSE_DATA_ERROR" = "Data response is undefined";

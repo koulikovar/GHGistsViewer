@@ -24,12 +24,10 @@ final class GistNetworkService: NetworkService {
 
         let gistTask = session.dataTask(with: urlRequest) { data, respone, error in
             if let error = error {
-                assertionFailure(error.localizedDescription)
                 failure(NetworkError(message: error.localizedDescription))
                 return
             }
             guard let data = data else {
-                assertionFailure("NETWORK_RESPONSE_DATA_ERROR".localized)
                 failure(NetworkError(message: "NETWORK_RESPONSE_DATA_ERROR".localized))
                 return
             }

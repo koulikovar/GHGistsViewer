@@ -20,7 +20,7 @@ final class DetailGistPresenter: DetailGistPresenterProtocol {
     }
 
     func description() -> String {
-        return gist().description
+        return gist().description ?? ""
     }
 
     func username() -> String {
@@ -32,10 +32,7 @@ final class DetailGistPresenter: DetailGistPresenterProtocol {
     }
 
     func commits() -> [Commit] {
-        guard let commits = gist().commits else {
-            return []
-        }
-        return commits
+        return gist().commits ?? []
     }
 
     func update() {
@@ -55,6 +52,14 @@ final class DetailGistPresenter: DetailGistPresenterProtocol {
         view?.push(fileViewer)
     }
 
+    func status(for commit: Commit) -> String {
+        guard let status = commit.status else {
+            return ""
+        }
+
+        return "Additions: \(status.additions), Deletions: \(status.deletions)"
+    }
+
     func loadAvatar(success: @escaping DetailGistPresenterProtocol.ImageLoadingSuccess, failure: @escaping DetailGistPresenterProtocol.ImageLoadingFailure) {
         router.imageProvider.loadImage(from: gist().owner.avatarUrl, success: { image in
             DispatchQueue.main.async {
@@ -68,9 +73,6 @@ final class DetailGistPresenter: DetailGistPresenterProtocol {
     }
 
     private func gist() -> Gist {
-        guard let gist = dataProvider.data else {
-            return Gist.undefined
-        }
-        return gist
+        return dataProvider.data ?? Gist.undefined
     }
 }

@@ -21,9 +21,13 @@ class GistsListViewController: UIViewController {
 
         tableView.rowHeight = UITableViewAutomaticDimension
 
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshList), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+
         title = "GISTS_LIST_VC_TITLE".localized
 
-        presenter.updateList()
+        refreshList()
 
         // Do any additional setup after loading the view.
     }
@@ -32,16 +36,25 @@ class GistsListViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+     @objc private func refreshList() {
+        presenter.updateList()
+    }
 }
 
 extension GistsListViewController: GistsListView {
     func updateTableView() {
         tableView.reloadData()
+        tableView.refreshControl?.endRefreshing()
     }
 
     func showError(message: String) {
-        assertionFailure(message)
-        print(message)
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "CANCEL_BUTTON_TITLE".localized, style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "REFRESH_BUTTON_TITLE".localized, style: .default, handler: { [weak self] action in
+            self?.refreshList()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
     func push(_ view: DetailGistView) {
@@ -69,7 +82,6 @@ extension GistsListViewController: UITableViewDelegate, UITableViewDataSource {
                 cellThatRequested.avatar.image = image
             }
         }, failure: {error in
-            assertionFailure(error)
             print(error)
         })
 

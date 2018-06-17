@@ -13,5 +13,5 @@ struct Commit: Decodable {
     }
 
     let version: String
-    let status: CommitStatus
+    let status: CommitStatus?
 }
