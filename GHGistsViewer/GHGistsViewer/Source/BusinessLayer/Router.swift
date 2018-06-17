@@ -6,6 +6,8 @@
 //  Copyright © 2018 Your Mother Lover. All rights reserved.
 //
 
+import Foundation
+
 final class Router {
     lazy var gistsListView: GistsListView = {
         let dataProvider = DataProvider<[Gist]>(networkService: networkService)
@@ -25,5 +27,12 @@ final class Router {
         dataProvider.data = gist
 
         return DetailGistAssembly(router: self, dataProvider: dataProvider).view
+    }
+
+    func fileViewer(for file: File) -> FileViewer {
+        let dataProvider = DataProvider<File>(networkService: networkService)
+        dataProvider.data = file
+
+        return FileViewerAssembly(router: self, dataProvider: dataProvider).view
     }
 }

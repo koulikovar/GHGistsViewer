@@ -8,4 +8,8 @@
 
 protocol DetailGistView: AnyObject {
     var presenter: DetailGistPresenterProtocol! { get set }
+
+    func updateTableView()
+    func showError(message: String)
+    func push(_ view: FileViewer)
 }

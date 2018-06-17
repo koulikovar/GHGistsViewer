@@ -2,7 +2,7 @@
 //  GistTableViewCell.swift
 //  GHGistsViewer
 //
-//  Created by EKATERINA CHIZHOVA on 17.06.2018.
+//  Created by Artem Kulikov on 17.06.2018.
 //  Copyright © 2018 Your Mother Lover. All rights reserved.
 //
 

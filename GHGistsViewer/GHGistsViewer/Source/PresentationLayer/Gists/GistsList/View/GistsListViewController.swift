@@ -51,7 +51,7 @@ extension GistsListViewController: GistsListView {
 
 extension GistsListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.list.count
+        return presenter.list().count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,7 +59,7 @@ extension GistsListViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell(style: .default, reuseIdentifier: "DefaultCellIdentifier")
         }
 
-        let currentGist = presenter.list[indexPath.row]
+        let currentGist = presenter.list()[indexPath.row]
 
         cell.title.text = currentGist.title
         cell.username.text = currentGist.owner.login
@@ -77,7 +77,7 @@ extension GistsListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.didSelect(presenter.list[indexPath.row])
+        presenter.didSelect(presenter.list()[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }

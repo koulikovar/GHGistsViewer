@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="avatar" destination="fyy-n8-yTn" id="adi-5S-W5Q"/>
                 <outlet property="gistTitle" destination="Wgn-fp-8xO" id="xEg-O6-pJl"/>
+                <outlet property="tableView" destination="2hK-VM-dKd" id="FUp-tT-ZZn"/>
                 <outlet property="username" destination="scn-tk-H5A" id="2FL-QO-Fe4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -48,20 +49,32 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2hK-VM-dKd">
+                    <rect key="frame" x="0.0" y="177" width="375" height="490"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0lt-jg-eiK"/>
+                        <outlet property="delegate" destination="-1" id="hca-H9-GMS"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="scn-tk-H5A" firstAttribute="leading" secondItem="fyy-n8-yTn" secondAttribute="trailing" constant="8" id="0PK-PM-138"/>
+                <constraint firstItem="2hK-VM-dKd" firstAttribute="bottom" secondItem="c0f-Ge-a7O" secondAttribute="bottom" id="2ja-CF-gOD"/>
+                <constraint firstItem="2hK-VM-dKd" firstAttribute="trailing" secondItem="c0f-Ge-a7O" secondAttribute="trailing" id="9yd-ps-Ub7"/>
                 <constraint firstItem="c0f-Ge-a7O" firstAttribute="trailing" secondItem="scn-tk-H5A" secondAttribute="trailing" constant="16" id="GA4-0d-7ma"/>
+                <constraint firstItem="2hK-VM-dKd" firstAttribute="top" secondItem="Wgn-fp-8xO" secondAttribute="bottom" constant="8" id="MDY-Lj-4lF"/>
                 <constraint firstItem="Wgn-fp-8xO" firstAttribute="top" secondItem="fyy-n8-yTn" secondAttribute="bottom" constant="8" id="Nyl-Xs-UVd"/>
                 <constraint firstItem="fyy-n8-yTn" firstAttribute="leading" secondItem="c0f-Ge-a7O" secondAttribute="leading" constant="16" id="Quo-cc-mKl"/>
                 <constraint firstItem="fyy-n8-yTn" firstAttribute="top" secondItem="c0f-Ge-a7O" secondAttribute="top" id="d6a-MF-XSP"/>
+                <constraint firstItem="2hK-VM-dKd" firstAttribute="leading" secondItem="c0f-Ge-a7O" secondAttribute="leading" id="odh-pi-irE"/>
                 <constraint firstItem="c0f-Ge-a7O" firstAttribute="trailing" secondItem="Wgn-fp-8xO" secondAttribute="trailing" constant="16" id="yfW-z6-hYA"/>
                 <constraint firstItem="scn-tk-H5A" firstAttribute="top" secondItem="c0f-Ge-a7O" secondAttribute="top" id="zGf-L0-y5a"/>
                 <constraint firstItem="Wgn-fp-8xO" firstAttribute="leading" secondItem="c0f-Ge-a7O" secondAttribute="leading" constant="16" id="zek-nP-F87"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="c0f-Ge-a7O"/>
-            <point key="canvasLocation" x="-98.5" y="13.5"/>
+            <point key="canvasLocation" x="-67.5" y="-115.5"/>
         </view>
     </objects>
 </document>

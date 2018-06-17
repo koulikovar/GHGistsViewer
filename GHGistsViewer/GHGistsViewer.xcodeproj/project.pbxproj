@@ -41,6 +41,15 @@
 		BA5DAD7C20D6847800F919E4 /* DetailGistAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7B20D6847800F919E4 /* DetailGistAssembly.swift */; };
 		BA5DAD7E20D6875300F919E4 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7D20D6875300F919E4 /* Router.swift */; };
 		BA5DAD8020D68ACD00F919E4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD7F20D68ACD00F919E4 /* Assembly.swift */; };
+		BA5DAD8220D6A61600F919E4 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD8120D6A61600F919E4 /* File.swift */; };
+		BA5DAD8420D6AF3600F919E4 /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD8320D6AF3600F919E4 /* Commit.swift */; };
+		BA5DAD8620D6B00100F919E4 /* CommitStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD8520D6B00100F919E4 /* CommitStatus.swift */; };
+		BA5DAD8B20D6B93D00F919E4 /* FileViewerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD8A20D6B93D00F919E4 /* FileViewerAssembly.swift */; };
+		BA5DAD8E20D6B95500F919E4 /* FileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD8C20D6B95500F919E4 /* FileViewController.swift */; };
+		BA5DAD8F20D6B95500F919E4 /* FileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA5DAD8D20D6B95500F919E4 /* FileViewController.xib */; };
+		BA5DAD9120D6B96300F919E4 /* FileViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD9020D6B96300F919E4 /* FileViewer.swift */; };
+		BA5DAD9320D6B99600F919E4 /* FileViewerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD9220D6B99600F919E4 /* FileViewerPresenterProtocol.swift */; };
+		BA5DAD9520D6B9A700F919E4 /* FileViewerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5DAD9420D6B9A700F919E4 /* FileViewerPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +101,15 @@
 		BA5DAD7B20D6847800F919E4 /* DetailGistAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailGistAssembly.swift; sourceTree = "<group>"; };
 		BA5DAD7D20D6875300F919E4 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		BA5DAD7F20D68ACD00F919E4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		BA5DAD8120D6A61600F919E4 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		BA5DAD8320D6AF3600F919E4 /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		BA5DAD8520D6B00100F919E4 /* CommitStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitStatus.swift; sourceTree = "<group>"; };
+		BA5DAD8A20D6B93D00F919E4 /* FileViewerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewerAssembly.swift; sourceTree = "<group>"; };
+		BA5DAD8C20D6B95500F919E4 /* FileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewController.swift; sourceTree = "<group>"; };
+		BA5DAD8D20D6B95500F919E4 /* FileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileViewController.xib; sourceTree = "<group>"; };
+		BA5DAD9020D6B96300F919E4 /* FileViewer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewer.swift; sourceTree = "<group>"; };
+		BA5DAD9220D6B99600F919E4 /* FileViewerPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewerPresenterProtocol.swift; sourceTree = "<group>"; };
+		BA5DAD9420D6B9A700F919E4 /* FileViewerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewerPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +205,7 @@
 		BA53738C20D4061F00B098E1 /* Gists */ = {
 			isa = PBXGroup;
 			children = (
+				BA5DAD8720D6B90000F919E4 /* FileViewer */,
 				BA53738E20D4064D00B098E1 /* DetailGist */,
 				BA53738D20D4063800B098E1 /* GistsList */,
 			);
@@ -247,6 +266,9 @@
 			children = (
 				BA5373A420D5498C00B098E1 /* Gist.swift */,
 				BA5373A620D54DDA00B098E1 /* User.swift */,
+				BA5DAD8120D6A61600F919E4 /* File.swift */,
+				BA5DAD8320D6AF3600F919E4 /* Commit.swift */,
+				BA5DAD8520D6B00100F919E4 /* CommitStatus.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -356,6 +378,35 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		BA5DAD8720D6B90000F919E4 /* FileViewer */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD8A20D6B93D00F919E4 /* FileViewerAssembly.swift */,
+				BA5DAD8920D6B92A00F919E4 /* Presenter */,
+				BA5DAD8820D6B91F00F919E4 /* View */,
+			);
+			path = FileViewer;
+			sourceTree = "<group>";
+		};
+		BA5DAD8820D6B91F00F919E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD9020D6B96300F919E4 /* FileViewer.swift */,
+				BA5DAD8C20D6B95500F919E4 /* FileViewController.swift */,
+				BA5DAD8D20D6B95500F919E4 /* FileViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BA5DAD8920D6B92A00F919E4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BA5DAD9220D6B99600F919E4 /* FileViewerPresenterProtocol.swift */,
+				BA5DAD9420D6B9A700F919E4 /* FileViewerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -438,6 +489,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA53736B20D3F6A200B098E1 /* LaunchScreen.storyboard in Resources */,
+				BA5DAD8F20D6B95500F919E4 /* FileViewController.xib in Resources */,
 				BA5DAD4820D565E600F919E4 /* GistsListViewController.xib in Resources */,
 				BA53736820D3F6A200B098E1 /* Assets.xcassets in Resources */,
 				BA5373AC20D552F500B098E1 /* Localizable.strings in Resources */,
@@ -460,11 +512,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA5DAD8420D6AF3600F919E4 /* Commit.swift in Sources */,
 				BA5DAD7820D6827F00F919E4 /* DetailGistPresenterProtocol.swift in Sources */,
 				BA5DAD6B20D6712A00F919E4 /* ImageProvider.swift in Sources */,
 				BA53739C20D4402700B098E1 /* GistNetworkService.swift in Sources */,
 				BA5DAD6820D6694A00F919E4 /* UITableViewCell+CellIdentifier.swift in Sources */,
+				BA5DAD8B20D6B93D00F919E4 /* FileViewerAssembly.swift in Sources */,
 				BA5DAD7E20D6875300F919E4 /* Router.swift in Sources */,
+				BA5DAD9120D6B96300F919E4 /* FileViewer.swift in Sources */,
+				BA5DAD8220D6A61600F919E4 /* File.swift in Sources */,
 				BA5DAD5920D56E8D00F919E4 /* GistsListPresenter.swift in Sources */,
 				BA5DAD4720D565E600F919E4 /* GistsListViewController.swift in Sources */,
 				BA53739E20D443C700B098E1 /* NetworkError.swift in Sources */,
@@ -475,6 +531,7 @@
 				BA53739020D4249800B098E1 /* NetworkRequest.swift in Sources */,
 				BA53736120D3F6A000B098E1 /* AppDelegate.swift in Sources */,
 				BA5DAD5720D56E8100F919E4 /* GistsListPresenterProtocol.swift in Sources */,
+				BA5DAD8E20D6B95500F919E4 /* FileViewController.swift in Sources */,
 				BA5DAD5520D56D5F00F919E4 /* GistsListView.swift in Sources */,
 				BA5DAD7C20D6847800F919E4 /* DetailGistAssembly.swift in Sources */,
 				BA5DAD8020D68ACD00F919E4 /* Assembly.swift in Sources */,
@@ -482,11 +539,14 @@
 				BA53739320D42A5F00B098E1 /* GistRequest.swift in Sources */,
 				BA5DAD7A20D682AD00F919E4 /* DetailGistPresenter.swift in Sources */,
 				BA5373A720D54DDA00B098E1 /* User.swift in Sources */,
+				BA5DAD9320D6B99600F919E4 /* FileViewerPresenterProtocol.swift in Sources */,
 				BA5DAD7320D681D400F919E4 /* DetailGistViewController.swift in Sources */,
 				BA5DAD5F20D652AC00F919E4 /* DataProvider.swift in Sources */,
+				BA5DAD9520D6B9A700F919E4 /* FileViewerPresenter.swift in Sources */,
 				BA5DAD5220D56D2500F919E4 /* GistsListAssembly.swift in Sources */,
 				BA5373B420D55F8400B098E1 /* ModelMaker.swift in Sources */,
 				BA5DAD6E20D6758B00F919E4 /* ImageRequest.swift in Sources */,
+				BA5DAD8620D6B00100F919E4 /* CommitStatus.swift in Sources */,
 				BA53739A20D43F8000B098E1 /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

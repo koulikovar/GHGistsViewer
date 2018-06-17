@@ -9,13 +9,6 @@
 import Foundation
 
 final class GistsListPresenter: GistsListPresenterProtocol {
-    var list: [Gist] {
-        guard let data = dataProvider.data else {
-            return []
-        }
-        return data
-    }
-
     private let router: Router
     private weak var view: GistsListView?
     private let dataProvider: DataProvider<[Gist]>
@@ -50,8 +43,19 @@ final class GistsListPresenter: GistsListPresenterProtocol {
         })
     }
 
+    func list() -> [Gist] {
+        return gists()
+    }
+
     func didSelect(_ gist: Gist) {
         let detailGist = router.detailGistView(for: gist)
         view?.push(detailGist)
+    }
+
+    private func gists() -> [Gist] {
+        guard let data = dataProvider.data else {
+            return []
+        }
+        return data
     }
 }

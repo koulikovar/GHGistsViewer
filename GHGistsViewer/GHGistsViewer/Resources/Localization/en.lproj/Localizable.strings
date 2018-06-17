@@ -8,6 +8,8 @@
 
 "GISTS_LIST_VC_TITLE" = "Gists List";
 "DETAIL_GIST_TITLE" = "Detail gist";
+"DETAIL_GIST_FILES_LIST_TITLE" = "Files list";
+"DETAIL_GIST_COMMITS_TITLE" = "Commits";
 "INVALID_IMAGE_DATA" = "Invalid image data";
 
 "NETWORK_URL_ERROR" = "Incorrect URL";

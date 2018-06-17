@@ -12,11 +12,10 @@ protocol GistsListPresenterProtocol {
     typealias ImageLoadingSuccess = (UIImage) -> ()
     typealias ImageLoadingFailure = (String) -> ()
 
-    var list: [Gist] { get }
-
     init(router: Router, view: GistsListView, dataProvider: DataProvider<[Gist]>)
 
     func didSelect(_ gist: Gist)
+    func list() -> [Gist]
     func updateList()
     func loadImage(for url: String,
                    success: @escaping ImageLoadingSuccess,
